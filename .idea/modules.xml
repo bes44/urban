@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Urban.iml" filepath="$PROJECT_DIR$/Urban.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_1_IntellijIDE/_1_IntellijIDE.iml" filepath="$PROJECT_DIR$/_1_IntellijIDE/_1_IntellijIDE.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_2_VariablesDataTypesOperators/_2_VariablesDataTypesOperators.iml" filepath="$PROJECT_DIR$/_2_VariablesDataTypesOperators/_2_VariablesDataTypesOperators.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_3_JavaIfSwitchReturn/_3_JavaIfSwitchReturn.iml" filepath="$PROJECT_DIR$/_3_JavaIfSwitchReturn/_3_JavaIfSwitchReturn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_4_WhileDoWhileForBreakContinue/_4_WhileDoWhileForBreakContinue.iml" filepath="$PROJECT_DIR$/_4_WhileDoWhileForBreakContinue/_4_WhileDoWhileForBreakContinue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_5_ClassMembersConstructorsMethods/_5_ClassMembersConstructorsMethods.iml" filepath="$PROJECT_DIR$/_5_ClassMembersConstructorsMethods/_5_ClassMembersConstructorsMethods.iml" />
+      <module fileurl="file://$PROJECT_DIR$/_6_Array/_6_Array.iml" filepath="$PROJECT_DIR$/_6_Array/_6_Array.iml" />
+    </modules>
+  </component>
+</project>
