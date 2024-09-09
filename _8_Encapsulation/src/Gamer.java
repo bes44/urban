@@ -38,6 +38,13 @@ public class Gamer {
             System.out.println("Nickname: " + gamer.getNickname() + ", Active: " + gamer.isActive());
         }
     }
+    public static void PrintActiveGamers(Gamer[] gs)
+    {
+        for (Gamer gamer : gs) {
+            if (gamer.isActive() == true)
+            System.out.println("Nickname: " + gamer.getNickname() + ", Active: " + gamer.isActive());
+        }
+    }
 
         public static void main(String[] args) {
             Gamer[] gamers = new Gamer[5];
@@ -46,8 +53,8 @@ public class Gamer {
             gamers[2] = new Gamer("Наканор", false);
             gamers[3] = new Gamer("Алефтина", true);
             gamers[4] = new Gamer("Евпатий", false);
-            PrintGamers (gamers);
-
+     //       PrintGamers (gamers);
+            PrintActiveGamers (gamers);
 
             }
     }
