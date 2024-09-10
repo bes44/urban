@@ -22,8 +22,7 @@ public class Main {
                 .max(Comparator.comparingInt(String::length))
                 .orElse("");
 
-        // Вывод результата
-        System.out.println("Самое длинное слово: " + longestWord);
+         System.out.println("Самое длинное слово: " + longestWord);
 
     }
 }
