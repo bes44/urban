@@ -14,13 +14,14 @@ import java.util.stream.Collectors;
 public class Main {
     public static void main(String[] args) {
       System.out.println("Задание 1");
-      List<String> foods = Arrays.asList("apple", "banana", "avocado", "blueberry", "carrot", "apricot");
+      List<String> foods = Arrays.asList("apple", "banana", "Avocado", "blueberry", "carrot", "apricot");
       String searchLetter = "a";
       long count = foods.stream()
                 .filter(food -> {
-                    return food.startsWith(String.valueOf((searchLetter.toLowerCase())));
+                    return food.toLowerCase().startsWith(String.valueOf((searchLetter.toLowerCase())));
                 })
                 .count();
+
       System.out.println("Количество продуктов, начинающихся с буквы " + searchLetter.toUpperCase() + ": " + count);
 
       System.out.println("Задание 2");
