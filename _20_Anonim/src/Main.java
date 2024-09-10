@@ -8,6 +8,58 @@
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+
+        Printable printable1 = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Это первая реализация метода print.");
+            }
+        };
+
+        Printable printable2 = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Это вторая реализация метода print.");
+            }
+        };
+
+        Printable printable3 = new Printable() {
+            @Override
+            public void print() {
+                System.out.println("Это третья реализация метода print.");
+            }
+        };
+
+        System.out.println("Задание 1");
+        printable1.print();
+        printable2.print();
+        printable3.print();
+
+        System.out.println("Задание 2");
+        Concationble concationble1 = new Concationble() {
+            @Override
+            public String concat(String str1, String str2) {
+                return str1 + " " + str2;
+            }
+        };
+
+        Concationble concationble2 = new Concationble() {
+            @Override
+            public String concat(String str1, String str2) {
+                return str1.toUpperCase() + " " + str2.toUpperCase();
+            }
+        };
+
+        Concationble concationble3 = new Concationble() {
+            @Override
+            public String concat(String str1, String str2) {
+                return str1.toLowerCase() + " " + str2.toLowerCase();
+            }
+        };
+
+        // Вызов метода concat() для каждого анонимного класса
+        System.out.println(concationble1.concat("Hello", "World"));
+        System.out.println(concationble2.concat("Hello", "World"));
+        System.out.println(concationble3.concat("Hello", "World"));
     }
 }
