@@ -1,3 +1,5 @@
+import java.sql.SQLOutput
+
 /**
  * Цель: Написать программу на языке Kotlin для работы с переменными и типами данных.
 
@@ -19,7 +21,13 @@ fun main() {
 
     println("Задача 2")
     val numbers = listOf(4, 45, -2, 8)
-    val positiveCount = numbers.count { it > 0 }
+
+    //   решение красивее
+    //   val positiveCount = numbers.count { it > 0 }
+    var positiveCount = 0
+    for (number: Int in numbers) {
+        if (number > 0) positiveCount++
+    }
     println("Количество положительных чисел: $positiveCount")
 
     println("Задача 3")
@@ -29,35 +37,57 @@ fun main() {
     println("Большее число: $max")
 
     println("Задача 4")
-    val dayNumber = 3
-    val dayName = when (dayNumber) {
-        1 -> "понедельник"
-        2 -> "вторник"
-        3 -> "среда"
-        4 -> "четверг"
-        5 -> "пятница"
-        6 -> "суббота"
-        7 -> "воскресенье"
-        else -> "ошибка"
-    }
+    val dayNumber = 2
+
+    /*  решение красивее
+       val dayName = when (dayNumber) {
+           1 -> "понедельник"
+           2 -> "вторник"
+           3 -> "среда"
+           4 -> "четверг"
+           5 -> "пятница"
+           6 -> "суббота"
+           7 -> "воскресенье"
+           else -> "на неделе нет такого дня"
+       }
+    */
+    var dayName: String = ""
+    if ( dayNumber == 1) dayName = "понедельник"
+    else if ( dayNumber == 2) dayName = "вторник"
+    else if ( dayNumber == 3) dayName = "среда"
+    else if ( dayNumber == 4) dayName = "четверг"
+    else if ( dayNumber == 5) dayName = "пятница"
+    else if ( dayNumber == 6) dayName = "суббота"
+    else if ( dayNumber == 7) dayName = "воскресенье"
+    else dayName = "на неделе нет такого дня"
     println("День недели: $dayName")
 
     println("Задача 5")
     val grade = 4
+    /* решение красивее
     val gradeDescription = when (grade) {
         1 -> "плохо"
         2 -> "неудовлетворительно"
         3 -> "удовлетворительно"
         4 -> "хорошо"
         5 -> "отлично"
-        else -> "ошибка"
+        else -> "Такие оценки в России не ставят"
     }
+     */
+    var gradeDescription: String = ""
+    if ( grade == 1) gradeDescription = "плохо"
+    else if ( grade == 2) gradeDescription = "неудовлетворительно"
+    else if ( grade == 3) gradeDescription = "удовлетворительно"
+    else if ( grade == 4) gradeDescription = "хорошо"
+    else if ( grade == 5) gradeDescription = "отлично"
+    else gradeDescription = "Такие оценки в России не ставят"
     println("Описание оценки: $gradeDescription")
 
     println("Задача 6")
     val actionNumber = 3
     val a = 10.0
     val b = 5.0
+    /* решение красивее
     val actionResult = when (actionNumber) {
         1 -> a + b
         2 -> a - b
@@ -65,5 +95,14 @@ fun main() {
         4 -> a / b
         else -> "ошибка"
     }
+     */
+    var actionResult = 0.0
+    if ( actionNumber == 1) {actionResult = a+b}
+    else if ( actionNumber == 2) {actionResult = a-b}
+    else if ( actionNumber == 3) {actionResult = a*b}
+    else if ( actionNumber == 4) { if (b != 0.0) actionResult =a / b
+         else  println("Ошибка: деление на ноль")
+    }
+    else println("Операция не предусмотрена")
     println("Результат действия: $actionResult")
 }
