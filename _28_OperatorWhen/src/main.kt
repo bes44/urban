@@ -1,3 +1,5 @@
+import kotlin.math.roundToInt
+
 /**
  *
 *1. Дан порядковый номер месяца года. Нужно написать программу, которая будет выводить на экран время года и название месяца. Пример вывода: «Зима: Январь.»
@@ -22,8 +24,8 @@ fun main() {
 
     println("Задание 2")
     val number = 5.67
-    var roundedNumber = number.toInt()
-    if ((number-roundedNumber)>0.5) roundedNumber++
+    var roundedNumber = number.roundToInt()
+ //   if ((number-roundedNumber)>0.5) roundedNumber++
     println("Округленное число: $roundedNumber")
 
     println("Задание 3")
@@ -32,7 +34,7 @@ fun main() {
         in 0..5 -> "Раннее утро"
         in 6..11 -> "Утро"
         in 12..17 -> "День"
-        in 18..20 -> "Вечер"
+        in 17..20 -> "Вечер"
         in 21..23 -> "Поздний вечер"
         else -> "Неверное время"
     }
