@@ -1,4 +1,6 @@
+import jdk.nashorn.internal.objects.NativeMath.pow
 import kotlin.math.sqrt
+
 
 /**
   * 1. Даны два числа a и b. Найти их среднее арифметическое.
@@ -37,18 +39,29 @@ fun main() {
 
     println("Задание 4")
     var number = 1
-    while (number <= 512) {
+ /*   while (number <= 512) {
         print("$number ")
         number *= 2
     }
     println()
+    number = 1*/
+    for (number in generateSequence(1) { it * 2 }.takeWhile { it <= 512 }) {
+        print("$number ")
+    }
+    println()
     println("Задание 5")
-    var n = 20
+    for (n in 20  downTo  0)
+    {
+        if (n % 2 == 0) {
+            print("$n ")
+        }
+    }
+ /*   var n = 20
     while (n >= 0) {
         if (n % 2 == 0) {
             println(n)
         }
         n--
     }
-
+*/
 }
