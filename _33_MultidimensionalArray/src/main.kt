@@ -35,12 +35,21 @@ fun findMedian(matrix: Array<Array<Int>>): Double {
 }
 
 fun fillMatrix(): Array<Array<Int>> {
-    val matrix = Array(5) { Array(5) { 0 } }
-    for (i in 0 until 5) {
+    var matrix = Array(5) { Array(5) { 0 } }
+    matrix = arrayOf(
+        arrayOf(0,0,0,0,0),
+        arrayOf(0,0,0,0,0),
+        arrayOf(0,0,1,0,0),
+        arrayOf(0,1,1,1,0),
+        arrayOf(1,1,1,1,1)
+    );
+ /*   for (i in 0 until 5) {
         for (j in 0..i) {
             matrix[4 - i + j][j] = 1
         }
     }
+
+  */
     return matrix
 }
 
